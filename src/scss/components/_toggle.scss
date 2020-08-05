@@ -1,0 +1,57 @@
+.toggle {
+  width: 85%;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & span {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $desaturatedTextLight;
+  }
+}
+
+.switch {
+  width: 5rem;
+  height: 2.7rem;
+  display: inline-block;
+  position: relative;
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &:checked + .slider {
+      background: $toggleLight;
+    }
+    &:focus + .slider {
+      box-shadow: 0 0 0.1rem toggleLight;
+    }
+    &:checked + .slider:before {
+      background-color: $cardBgLight;
+      transform: translateX(2rem);
+    }
+  }
+}
+
+.slider {
+  border-radius: 2.7rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $toggleDark;
+  transition: 0.4s;
+  &:before {
+    border-radius: 50%;
+    content: '';
+    height: 1.9rem;
+    width: 1.9rem;
+    position: absolute;
+    left: 0.4rem;
+    bottom: 0.4rem;
+    background-color: $cardBgDark;
+    transition: 0.4s;
+  }
+}

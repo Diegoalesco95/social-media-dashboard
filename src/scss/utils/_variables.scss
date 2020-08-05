@@ -1,0 +1,33 @@
+// Colors
+// Primary
+
+$limeGreen: hsl(163, 72%, 41%);
+$brightRed: hsl(356, 69%, 56%);
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(180deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youTube: hsl(348, 97%, 39%);
+
+// Dark Theme
+$toggleDark: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+// Light Theme
+$toggleLight: hsl(230, 22%, 74%);
+
+// Neutral
+//  Dark Theme
+
+$backGroundDark: hsl(230, 17%, 14%);
+$topBgPatternDark: hsl(232, 19%, 15%);
+$cardBgDark: hsl(228, 28%, 20%);
+$desaturatedTextDark: hsl(228, 34%, 66%);
+$textDark: hsl(0, 0%, 100%);
+
+// Light Theme
+
+$backGroundLight: hsl(0, 0%, 100%);
+$topBgPatternLight: hsl(225, 100%, 98%);
+$cardBgLight: hsl(227, 47%, 96%);
+$desaturatedTextLight: hsl(228, 12%, 44%);
+$textLight: hsl(230, 17%, 14%);
