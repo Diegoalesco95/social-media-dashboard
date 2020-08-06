@@ -1,0 +1,92 @@
+.card {
+  width: 85%;
+  height: 22rem;
+  margin: 0 auto 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $cardBgLight;
+  & .network {
+    margin: -3rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & i {
+      font-size: 2.5rem;
+      margin: 1rem;
+    }
+    & small {
+      color: $desaturatedTextLight;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: $textLight;
+  }
+  & .follower {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 0.4rem;
+    color: $desaturatedTextLight;
+  }
+  & .stats {
+    margin-top: 2rem;
+    & .arrow {
+      font-size: 0.8rem;
+    }
+    & small {
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.facebook {
+  border-top: 0.5rem solid $facebook;
+  & .network i {
+    color: $facebook;
+  }
+  & .stats {
+    color: $limeGreen;
+  }
+}
+
+.twitter {
+  border-top: 0.5rem solid $twitter;
+  & .network i {
+    color: $twitter;
+  }
+  & .stats {
+    color: $limeGreen;
+  }
+}
+
+.instagram {
+  border-top: 0.5rem solid;
+  border-image: $instagram 1;
+  & .network i {
+    background: $instagram;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  & .stats {
+    color: $limeGreen;
+  }
+}
+
+.youtube {
+  border-top: 0.5rem solid $youTube;
+  & .network i {
+    color: $youTube;
+  }
+  & .stats {
+    color: $brightRed;
+  }
+}

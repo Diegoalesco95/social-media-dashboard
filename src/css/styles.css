@@ -7,9 +7,13 @@ body {
   background-color: white;
 }
 
+main {
+  margin: 18rem 0 0;
+}
+
 header {
   width: 100%;
-  padding: 3rem 0;
+  padding: 3rem 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,4 +97,98 @@ header .info p {
   bottom: 0.4rem;
   background-color: #252a41;
   transition: 0.4s;
+}
+
+.card {
+  width: 85%;
+  height: 22rem;
+  margin: 0 auto 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2fa;
+}
+.card .network {
+  margin: -3rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .network i {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+.card .network small {
+  color: #63687e;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.card p {
+  margin: 0;
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: #1e202a;
+}
+.card .follower {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.4rem;
+  color: #63687e;
+}
+.card .stats {
+  margin-top: 2rem;
+}
+.card .stats .arrow {
+  font-size: 0.8rem;
+}
+.card .stats small {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.facebook {
+  border-top: 0.5rem solid #198ff5;
+}
+.facebook .network i {
+  color: #198ff5;
+}
+.facebook .stats {
+  color: #1db489;
+}
+
+.twitter {
+  border-top: 0.5rem solid #1ca0f2;
+}
+.twitter .network i {
+  color: #1ca0f2;
+}
+.twitter .stats {
+  color: #1db489;
+}
+
+.instagram {
+  border-top: 0.5rem solid;
+  border-image: linear-gradient(90deg, #fdc468, #df4996) 1;
+}
+.instagram .network i {
+  background: linear-gradient(90deg, #fdc468, #df4996);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.instagram .stats {
+  color: #1db489;
+}
+
+.youtube {
+  border-top: 0.5rem solid #c4032a;
+}
+.youtube .network i {
+  color: #c4032a;
+}
+.youtube .stats {
+  color: #dc414c;
 }
