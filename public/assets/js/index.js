@@ -1,0 +1,1 @@
+"use strict";const checkbox=document.querySelector("input[type=checkbox]"),handleTheme=()=>{checkbox.checked?document.documentElement.setAttribute("data-theme","dark"):document.documentElement.setAttribute("data-theme","light")};checkbox.addEventListener("change",handleTheme);

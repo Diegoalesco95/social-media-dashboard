@@ -1,0 +1,80 @@
+.card {
+  width: 85%;
+  height: 22rem;
+  margin: 0 auto 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--cardBgLight);
+  &_network {
+    margin: -3rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & i {
+      font-size: 2.5rem;
+      margin: 1rem;
+    }
+    & small {
+      color: var(--desaturatedTextLight);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--textLight);
+    animation: 1s fadeIn backwards;
+  }
+  &_follower {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 0.4rem;
+    color: var(--desaturatedTextLight);
+  }
+  &_stats {
+    margin-top: 2rem;
+    & .arrow {
+      font-size: 0.8rem;
+    }
+    & small {
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+  &:hover {
+    background-color: var(--hoverColor);
+  }
+  &:nth-child(3) p {
+    animation-delay: 0.1s;
+  }
+  &:nth-child(4) p {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(5) p {
+    animation-delay: 0.3s;
+  }
+}
+
+.facebook {
+  border-top: 0.5rem solid $facebook;
+}
+
+.twitter {
+  border-top: 0.5rem solid $twitter;
+}
+
+.instagram {
+  border-top: 0.5rem solid;
+  border-image: $instagram 1;
+}
+
+.youtube {
+  border-top: 0.5rem solid $youTube;
+}
