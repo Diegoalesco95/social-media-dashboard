@@ -1,14 +1,32 @@
 html {
   font-family: "Inter", sans-serif;
   font-size: 10px;
+  background-color: var(--backGroundLight);
+  --backGroundLight: hsl(230, 17%, 14%);
+  --topBgPatternLight: hsl(232, 19%, 15%);
+  --cardBgLight: hsl(228, 28%, 20%);
+  --desaturatedTextLight: hsl(228, 34%, 66%);
+  --textLight: hsl(0, 0%, 100%);
+  --hoverColor: hsl(229, 27%, 25%);
 }
 
-body {
-  background-color: white;
+html[data-theme=dark] {
+  background-color: var(--backGroundLight);
+  --backGroundLight: hsl(0, 0%, 100%);
+  --topBgPatternLight: hsl(225, 100%, 98%);
+  --cardBgLight: hsl(227, 47%, 96%);
+  --desaturatedTextLight: hsl(228, 12%, 44%);
+  --textLight: hsl(230, 17%, 14%);
+  --hoverColor: hsl(228, 50%, 90%);
 }
 
 main {
   margin: 18rem 0 0;
+}
+@media only screen and (min-width: 1024px) {
+  main {
+    margin-top: 14rem;
+  }
 }
 
 header {
@@ -25,20 +43,35 @@ header {
 }
 header .info {
   width: 85%;
-  border-bottom: 1px solid #00000088;
+  border-bottom: 0.1rem solid var(--desaturatedTextLight);
 }
 header .info h1 {
   margin: 0;
   font-size: 2.4rem;
   font-weight: 700;
-  color: #1e202a;
+  color: var(--textLight);
 }
 header .info p {
   margin: 0;
   padding: 0.5rem 0 2rem;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #63687e;
+  color: var(--desaturatedTextLight);
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 85%;
+    height: 6rem;
+    margin: 3rem auto;
+    padding: 0;
+    flex-direction: row;
+  }
+  header .info {
+    border-bottom: none;
+  }
+  header .info h1 {
+    margin: 2rem 0 0;
+  }
 }
 
 .toggle {
@@ -52,6 +85,11 @@ header .info p {
   font-size: 1.4rem;
   font-weight: 700;
   color: #63687e;
+}
+@media only screen and (min-width: 1024px) {
+  .toggle {
+    width: 18%;
+  }
 }
 
 .switch {
@@ -68,8 +106,11 @@ header .info p {
 .switch input:checked + .slider {
   background: #aeb3cb;
 }
+.switch input:checked + .slider:hover {
+  background: linear-gradient(90deg, #378fe6, #3eda82);
+}
 .switch input:focus + .slider {
-  box-shadow: 0 0 0.1rem toggleLight;
+  box-shadow: 0 0 0.1rem #aeb3cb;
 }
 .switch input:checked + .slider:before {
   background-color: #f0f2fa;
@@ -126,6 +167,19 @@ header .info p {
   color: #dc414c;
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1024px) {
+  .intro {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .card {
   width: 85%;
   height: 22rem;
@@ -135,20 +189,21 @@ header .info p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f0f2fa;
+  cursor: pointer;
+  background-color: var(--cardBgLight);
 }
-.card .network {
+.card_network {
   margin: -3rem 0 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.card .network i {
+.card_network i {
   font-size: 2.5rem;
   margin: 1rem;
 }
-.card .network small {
-  color: #63687e;
+.card_network small {
+  color: var(--desaturatedTextLight);
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -156,24 +211,27 @@ header .info p {
   margin: 0;
   font-size: 5.5rem;
   font-weight: 700;
-  color: #1e202a;
+  color: var(--textLight);
 }
-.card .follower {
+.card_follower {
   text-transform: uppercase;
   font-size: 1.3rem;
   letter-spacing: 0.4rem;
-  color: #63687e;
+  color: var(--desaturatedTextLight);
 }
-.card .stats {
+.card_stats {
   margin-top: 2rem;
 }
-.card .stats .arrow {
+.card_stats .arrow {
   font-size: 0.8rem;
 }
-.card .stats small {
+.card_stats small {
   margin-left: 0.5rem;
   font-size: 1.2rem;
   font-weight: 700;
+}
+.card:hover {
+  background-color: var(--hoverColor);
 }
 
 .facebook {
@@ -204,6 +262,18 @@ header .info p {
   text-align: left;
   color: #63687e;
 }
+@media only screen and (min-width: 1024px) {
+  .overview {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .overview h2 {
+    margin: 3rem 0;
+    grid-column: 1/5;
+  }
+}
 
 .mini-card {
   width: 85%;
@@ -213,42 +283,47 @@ header .info p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f0f2fa;
+  cursor: pointer;
+  background-color: var(--cardBgLight);
 }
-.mini-card__views {
+.mini-card_views {
   display: flex;
   flex-direction: column;
   margin: 0 2rem;
 }
-.mini-card__views h3 {
+.mini-card_views h3 {
   margin: 0;
   margin-bottom: 2rem;
   font-size: 1.4rem;
-  color: #63687e;
+  color: var(--desaturatedTextLight);
 }
-.mini-card__views p {
+.mini-card_views p {
+  color: var(--textLight);
   margin: 0;
   font-size: 3rem;
   font-weight: 700;
 }
-.mini-card__stats {
+.mini-card_stats {
   display: flex;
   flex-direction: column;
   margin: 0 2rem;
   text-align: right;
 }
-.mini-card__stats .icon {
+.mini-card_stats .icon {
   font-size: 2.4rem;
   margin: 0 1rem 2rem;
 }
-.mini-card__stats span {
+.mini-card_stats span {
   font-weight: 700;
   margin: 1rem;
 }
-.mini-card__stats span i {
+.mini-card_stats span i {
   font-size: 1.2rem;
   margin-right: 0.5rem;
 }
-.mini-card__stats span small {
+.mini-card_stats span small {
   font-size: 1.2rem;
+}
+.mini-card:hover {
+  background-color: var(--hoverColor);
 }

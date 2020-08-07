@@ -1,0 +1,10 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  @include media(laptop) {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

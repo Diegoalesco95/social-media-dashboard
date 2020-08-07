@@ -6,8 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $cardBgLight;
-  &__views {
+  cursor: pointer;
+  background-color: var(--cardBgLight);
+  &_views {
     display: flex;
     flex-direction: column;
     margin: 0 2rem;
@@ -15,15 +16,16 @@
       margin: 0;
       margin-bottom: 2rem;
       font-size: 1.4rem;
-      color: $desaturatedTextLight;
+      color: var(--desaturatedTextLight);
     }
     & p {
+      color: var(--textLight);
       margin: 0;
       font-size: 3rem;
       font-weight: 700;
     }
   }
-  &__stats {
+  &_stats {
     display: flex;
     flex-direction: column;
     margin: 0 2rem;
@@ -43,5 +45,8 @@
         font-size: 1.2rem;
       }
     }
+  }
+  &:hover {
+    background-color: var(--hoverColor);
   }
 }

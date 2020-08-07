@@ -9,6 +9,9 @@
     font-weight: 700;
     color: $desaturatedTextLight;
   }
+  @include media(laptop) {
+    width: 18%;
+  }
 }
 
 .switch {
@@ -22,9 +25,12 @@
     height: 0;
     &:checked + .slider {
       background: $toggleLight;
+      &:hover {
+        background: $toggleDark;
+      }
     }
     &:focus + .slider {
-      box-shadow: 0 0 0.1rem toggleLight;
+      box-shadow: 0 0 0.1rem $toggleLight;
     }
     &:checked + .slider:before {
       background-color: $cardBgLight;

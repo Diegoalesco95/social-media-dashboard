@@ -1,10 +1,10 @@
 mixin miniCard(title, number, icon, direction, arrow, stats)
   .mini-card
-    .mini-card__views
+    .mini-card_views
       h3=title
       p=number
-    .mini-card__stats
+    .mini-card_stats
       i(class=icon).icon
-      span.mini-card__stats--values(class=direction)
+      span.mini-card_stats--values(class=direction)
         i(class=arrow)
         small=stats + "%"

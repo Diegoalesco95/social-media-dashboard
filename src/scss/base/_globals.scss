@@ -1,12 +1,31 @@
 html {
   font-family: 'Inter', sans-serif;
   font-size: 10px;
+  background-color: var(--backGroundLight);
+
+  // Dark Theme
+  --backGroundLight: hsl(230, 17%, 14%);
+  --topBgPatternLight: hsl(232, 19%, 15%);
+  --cardBgLight: hsl(228, 28%, 20%);
+  --desaturatedTextLight: hsl(228, 34%, 66%);
+  --textLight: hsl(0, 0%, 100%);
+  --hoverColor: hsl(229, 27%, 25%);
 }
 
-body {
-  background-color: $backGroundLight;
+html[data-theme='dark'] {
+  background-color: var(--backGroundLight);
+  // Light Theme
+  --backGroundLight: hsl(0, 0%, 100%);
+  --topBgPatternLight: hsl(225, 100%, 98%);
+  --cardBgLight: hsl(227, 47%, 96%);
+  --desaturatedTextLight: hsl(228, 12%, 44%);
+  --textLight: hsl(230, 17%, 14%);
+  --hoverColor: hsl(228, 50%, 90%);
 }
 
 main {
   margin: 18rem 0 0;
+  @include media(laptop) {
+    margin-top: 14rem;
+  }
 }
