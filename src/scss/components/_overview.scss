@@ -6,7 +6,7 @@
     margin: 3rem auto;
     font-size: 2.2rem;
     text-align: left;
-    color: $desaturatedTextLight;
+    color: var(--textLight);
   }
   @include media(laptop) {
     width: 85%;
