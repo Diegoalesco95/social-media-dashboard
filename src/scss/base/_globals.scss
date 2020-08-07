@@ -26,6 +26,7 @@ html[data-theme='dark'] {
 main {
   margin: 18rem 0 0;
   @include media(laptop) {
+    height: 88vh;
     margin-top: 14rem;
   }
 }
