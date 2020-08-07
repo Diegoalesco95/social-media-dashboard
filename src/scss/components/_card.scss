@@ -50,43 +50,17 @@
 
 .facebook {
   border-top: 0.5rem solid $facebook;
-  & .network i {
-    color: $facebook;
-  }
-  & .stats {
-    color: $limeGreen;
-  }
 }
 
 .twitter {
   border-top: 0.5rem solid $twitter;
-  & .network i {
-    color: $twitter;
-  }
-  & .stats {
-    color: $limeGreen;
-  }
 }
 
 .instagram {
   border-top: 0.5rem solid;
   border-image: $instagram 1;
-  & .network i {
-    background: $instagram;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  & .stats {
-    color: $limeGreen;
-  }
 }
 
 .youtube {
   border-top: 0.5rem solid $youTube;
-  & .network i {
-    color: $youTube;
-  }
-  & .stats {
-    color: $brightRed;
-  }
 }

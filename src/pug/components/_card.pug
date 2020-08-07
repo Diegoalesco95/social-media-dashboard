@@ -1,10 +1,10 @@
-mixin card(social, icon, user, followers, text, arrow, number)
+mixin card(social, icon, user, followers, text, direction, arrow, number)
   .card(class=social)
     span.network
       i(class=icon)
       small=user
     p=followers
     span.follower=text
-    span.stats
+    span.stats(class=direction)
       i(class=arrow)
       small=number + " Today"

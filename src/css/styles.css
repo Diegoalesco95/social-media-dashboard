@@ -99,6 +99,33 @@ header .info p {
   transition: 0.4s;
 }
 
+.fa-facebook-square {
+  color: #198ff5;
+}
+
+.fa-twitter {
+  color: #1ca0f2;
+}
+
+.fa-instagram {
+  background: linear-gradient(90deg, #fdc468, #df4996);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-youtube {
+  color: #c4032a;
+}
+
+.up {
+  color: #1db489;
+}
+
+.down {
+  color: #dc414c;
+}
+
 .card {
   width: 85%;
   height: 22rem;
@@ -152,43 +179,76 @@ header .info p {
 .facebook {
   border-top: 0.5rem solid #198ff5;
 }
-.facebook .network i {
-  color: #198ff5;
-}
-.facebook .stats {
-  color: #1db489;
-}
 
 .twitter {
   border-top: 0.5rem solid #1ca0f2;
-}
-.twitter .network i {
-  color: #1ca0f2;
-}
-.twitter .stats {
-  color: #1db489;
 }
 
 .instagram {
   border-top: 0.5rem solid;
   border-image: linear-gradient(90deg, #fdc468, #df4996) 1;
 }
-.instagram .network i {
-  background: linear-gradient(90deg, #fdc468, #df4996);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.instagram .stats {
-  color: #1db489;
-}
 
 .youtube {
   border-top: 0.5rem solid #c4032a;
 }
-.youtube .network i {
-  color: #c4032a;
+
+.overview {
+  display: flex;
+  flex-direction: column;
 }
-.youtube .stats {
-  color: #dc414c;
+.overview h2 {
+  width: 85%;
+  margin: 3rem auto;
+  font-size: 2.2rem;
+  text-align: left;
+  color: #63687e;
+}
+
+.mini-card {
+  width: 85%;
+  height: 12rem;
+  border-radius: 0.5rem;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f2fa;
+}
+.mini-card__views {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+.mini-card__views h3 {
+  margin: 0;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: #63687e;
+}
+.mini-card__views p {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.mini-card__stats {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+  text-align: right;
+}
+.mini-card__stats .icon {
+  font-size: 2.4rem;
+  margin: 0 1rem 2rem;
+}
+.mini-card__stats span {
+  font-weight: 700;
+  margin: 1rem;
+}
+.mini-card__stats span i {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.mini-card__stats span small {
+  font-size: 1.2rem;
 }

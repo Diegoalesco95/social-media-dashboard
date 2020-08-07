@@ -1,0 +1,11 @@
+.overview {
+  display: flex;
+  flex-direction: column;
+  & h2 {
+    width: 85%;
+    margin: 3rem auto;
+    font-size: 2.2rem;
+    text-align: left;
+    color: $desaturatedTextLight;
+  }
+}

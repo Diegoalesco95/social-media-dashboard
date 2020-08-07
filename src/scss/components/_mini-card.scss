@@ -1,0 +1,47 @@
+.mini-card {
+  width: 85%;
+  height: 12rem;
+  border-radius: 0.5rem;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $cardBgLight;
+  &__views {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    & h3 {
+      margin: 0;
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      color: $desaturatedTextLight;
+    }
+    & p {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+  }
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    text-align: right;
+    & .icon {
+      font-size: 2.4rem;
+      margin: 0 1rem 2rem;
+    }
+    & span {
+      font-weight: 700;
+      margin: 1rem;
+      & i {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+      }
+      & small {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
